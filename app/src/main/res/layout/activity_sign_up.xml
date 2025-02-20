@@ -5,10 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#03664FA4"
     tools:context=".SignUp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/SignUpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans_bold"
@@ -18,10 +20,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintVertical_bias="0.572" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -34,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407">
+        app:layout_constraintVertical_bias="0.397">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,20 +44,21 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/SignUpUserTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_semibold"
-                android:text="Login ID"
+                android:text="Username"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextText3"
+                android:id="@+id/userNameId"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:autofillHints="none"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
-                android:hint="E-mail / Mobile Num"
+                android:hint="E-mail/UserID"
                 android:inputType="text"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -66,7 +69,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/SignUpPassTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_semibold"
@@ -74,19 +77,19 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextText4"
+                android:id="@+id/passId"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
                 android:hint="Pass"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/SignUpLoginButton"
         android:layout_width="159dp"
         android:layout_height="58dp"
         android:fontFamily="@font/open_sans_bold"
@@ -98,7 +101,78 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintVertical_bias="0.134" />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpLoginButton"
+        app:layout_constraintVertical_bias="0.43">
+
+        <LinearLayout
+            android:id="@+id/googleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:onClick="extraSignIn"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/googlelogo" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="190dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="Login with Google"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="extraSignIn"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/githublogo" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="190dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:background="#1B1E24"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="Login with Github"
+                android:textAlignment="center"
+                android:textColor="#FDFDFE" />
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@ package com.example.ar_application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,9 +15,26 @@ import androidx.core.view.WindowInsetsCompat;
 public class SignUp extends AppCompatActivity {
 
     public void loginBtn(View view){
-        Intent land = new Intent(this, MainActivity.class);
-        startActivity(land);
+        EditText userName = findViewById(R.id.userNameId);
+        EditText pass =  findViewById(R.id.passId);
 
+        String userNameString = userName.getText().toString();
+        String passString = pass.getText().toString();
+
+        if(userNameString.isEmpty() || passString.isEmpty()){
+            Toast.makeText(this, "Make sure you have filled all the required details", Toast.LENGTH_LONG).show();
+        }
+        else{
+            String userFirstName = userNameString.split(" ")[0];
+
+            Intent land = new Intent(this, MainActivity.class);
+            land.putExtra("userFirstName", userFirstName);
+            startActivity(land);
+        }
+    }
+
+    public void extraSignIn(View view){
+        Toast.makeText(this, "This feature will be implemented soon", Toast.LENGTH_SHORT).show();
     }
 
     @Override
