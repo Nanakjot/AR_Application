@@ -11,26 +11,30 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bebas_neue"
+        android:fontFamily="@font/open_sans_bold"
         android:text="Welcome Back"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="288dp"
-        android:layout_height="218dp"
+        android:layout_width="308dp"
+        android:layout_height="191dp"
         android:orientation="vertical"
-        android:padding="14dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,16 +45,16 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/bebas_neue"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="Login ID"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editTextText3"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
-                android:fontFamily="@font/bebas_neue"
+                android:fontFamily="@font/open_sans"
                 android:hint="E-mail / Mobile Num"
                 android:inputType="text"
                 android:textSize="14sp" />
@@ -65,16 +69,16 @@
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/bebas_neue"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="Password"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editTextText4"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
-                android:fontFamily="@font/bebas_neue"
+                android:fontFamily="@font/open_sans"
                 android:hint="Pass"
                 android:inputType="text"
                 android:textSize="14sp" />
@@ -83,13 +87,18 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="140dp"
-        android:layout_height="53dp"
-        android:fontFamily="monospace"
+        android:layout_width="159dp"
+        android:layout_height="58dp"
+        android:fontFamily="@font/open_sans_bold"
         android:onClick="loginBtn"
         android:text="Login"
+        android:textSize="16sp"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.197" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
