@@ -9,8 +9,9 @@
     android:backgroundTint="#03664FA4"
     tools:context=".SignUp">
 
+
     <TextView
-        android:id="@+id/SignUpTextView"
+        android:id="@+id/signInTextViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans_bold"
@@ -23,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572" />
+        app:layout_constraintVertical_bias="0.572"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -44,7 +45,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/SignUpUserTextView"
+                android:id="@+id/userNameTextViewLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_semibold"
@@ -52,7 +53,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/userNameId"
+                android:id="@+id/userNameIdLogin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:autofillHints="none"
@@ -69,7 +70,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/SignUpPassTextView"
+                android:id="@+id/userPassTextViewLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_semibold"
@@ -77,7 +78,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/passId"
+                android:id="@+id/userPassIdLogin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -89,7 +90,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/SignUpLoginButton"
+        android:id="@+id/loginButtonLogin"
         android:layout_width="159dp"
         android:layout_height="58dp"
         android:fontFamily="@font/open_sans_bold"
@@ -101,78 +102,106 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.164" />
 
     <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="120dp"
+        android:id="@+id/signInMethodsLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignUpLoginButton"
-        app:layout_constraintVertical_bias="0.43">
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonLogin">
 
         <LinearLayout
-            android:id="@+id/googleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:clickable="true"
-            android:onClick="extraSignIn"
+            android:id="@+id/googleBtnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/signinupbutton"
+            android:backgroundTint="#FFFFFF"
+            android:onClick="signInMethods"
             android:orientation="horizontal"
-            android:padding="8dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="558dp">
 
-            <ImageView
-                android:id="@+id/imageView"
+            <androidx.cardview.widget.CardView
                 android:layout_width="44dp"
                 android:layout_height="44dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/googlelogo" />
+                app:cardCornerRadius="64dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/googleImgLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/googlelogo" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/googleTextLogin"
                 android:layout_width="190dp"
                 android:layout_height="44dp"
                 android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:fontFamily="@font/open_sans"
                 android:gravity="center"
-                android:text="Login with Google"
+                android:text="Sign Up with Google"
                 android:textAlignment="center" />
-
-
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/gitBtn"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:onClick="extraSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/signinupbutton"
+            android:backgroundTint="#1B1E24"
+            android:onClick="signInMethods"
             android:orientation="horizontal"
-            android:padding="8dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="558dp">
 
-            <ImageView
-                android:id="@+id/imageView2"
+            <androidx.cardview.widget.CardView
                 android:layout_width="44dp"
                 android:layout_height="44dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/githublogo" />
+                app:cardCornerRadius="64dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/githubImgLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/githublogo" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/githubTextLogin"
                 android:layout_width="190dp"
                 android:layout_height="44dp"
                 android:layout_weight="1"
-                android:background="#1B1E24"
-                android:fontFamily="@font/open_sans"
                 android:gravity="center"
-                android:text="Login with Github"
+                android:text="Sign Up with Github"
                 android:textAlignment="center"
                 android:textColor="#FDFDFE" />
         </LinearLayout>
     </LinearLayout>
 
-
+    <TextView
+        android:id="@+id/signInTextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:onClick="openSignInPage"
+        android:padding="4dp"
+        android:text="New User"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

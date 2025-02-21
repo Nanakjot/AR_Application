@@ -15,8 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class SignUp extends AppCompatActivity {
 
     public void loginBtn(View view){
-        EditText userName = findViewById(R.id.userNameId);
-        EditText pass =  findViewById(R.id.passId);
+        EditText userName = findViewById(R.id.userNameIdLogin);
+        EditText pass =  findViewById(R.id.userPassIdLogin);
 
         String userNameString = userName.getText().toString();
         String passString = pass.getText().toString();
@@ -33,8 +33,13 @@ public class SignUp extends AppCompatActivity {
         }
     }
 
-    public void extraSignIn(View view){
-        Toast.makeText(this, "This feature will be implemented soon", Toast.LENGTH_SHORT).show();
+    public void openSignInPage(View view){
+        Intent signInIntent = new Intent(this, SignIn.class);
+        startActivity(signInIntent);
+    }
+
+    public void signInMethods(View view){
+        Toast.makeText(this, "Will be Implemented Soon", Toast.LENGTH_LONG).show();
     }
 
     @Override
