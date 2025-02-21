@@ -14,15 +14,16 @@ import androidx.core.view.WindowInsetsCompat;
 public class SignIn extends AppCompatActivity {
 
     public void clickVerify(View view){
-        Toast.makeText(this, "Will work after integrating Firebase", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Will work after integrating Firebase", Toast.LENGTH_SHORT).show();
     }
 
     public void openLoginPage(View view){
         Intent loginIntent = new Intent(this, SignUp.class);
+        loginIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(loginIntent);
     }
     public void signInMethods(View view){
-        Toast.makeText(this, "Will be Implemented Soon", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Will be Implemented Soon", Toast.LENGTH_SHORT).show();
     }
 
 

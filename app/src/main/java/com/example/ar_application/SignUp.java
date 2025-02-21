@@ -35,11 +35,12 @@ public class SignUp extends AppCompatActivity {
 
     public void openSignInPage(View view){
         Intent signInIntent = new Intent(this, SignIn.class);
+        signInIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(signInIntent);
     }
 
     public void signInMethods(View view){
-        Toast.makeText(this, "Will be Implemented Soon", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Will be Implemented Soon", Toast.LENGTH_SHORT).show();
     }
 
     @Override

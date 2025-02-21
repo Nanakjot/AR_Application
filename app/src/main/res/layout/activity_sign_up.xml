@@ -21,10 +21,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572"/>
+        app:layout_constraintVertical_bias="0.606" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -37,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.397">
+        app:layout_constraintVertical_bias="0.355">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,7 +102,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.265" />
 
     <LinearLayout
         android:id="@+id/signInMethodsLogin"
@@ -111,8 +111,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButtonLogin">
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonLogin"
+        app:layout_constraintVertical_bias="0.36">
 
         <LinearLayout
             android:id="@+id/googleBtnLogin"
